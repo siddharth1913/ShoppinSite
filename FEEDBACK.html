@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback_Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <style>
+        body{
+            background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+        }
+        .rating{
+            position:absolute;
+            top:30%;
+            left:15%;
+            transform:translate(-50%,-50%) rotateY(180deg);
+            display:flex;
+        }
+        .rating input{
+            display:none;
+        }
+        .rating label{
+            display:block;
+            cursor:pointer;
+            width:50px;
+        }
+        .rating label:before{
+            content:'★';
+            position:relative;
+            font-size:50px;
+            display:block;
+            color:#101010;
+        }
+        .rating label:after{
+            content:'★';
+            position:absolute;
+            font-size:50px;
+            display:block;
+            color:yellow;
+            top:0;
+            opacity:0;
+            transition:0.5s;
+            text-shadow:0 2px 5px rgba(0,0,0,0.5);
+        }
+        .rating label:hover:after,
+        .rating label:hover ~ label:after,
+        .rating input:checked ~ label:after{
+            opacity:1;
+        }
+        a{
+            color:blue;
+            text-decoration:none;
+        }
+        button{
+            margin-left:10px;
+            background-color:aqua;
+            border:none;
+            border-radius:5px;
+            padding:5px;
+            margin-top:30px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <br><hr style="margin-left:100px;margin-right:100px;background-color:rgb(11, 34, 242);height:2px;
+    box-shadow:0 0 5px rgb(12, 204, 247);"><br><br>
+
+    <h3 style="margin-left:80px;margin-top:40px;font-size:30px">User Rating</h3><br>
+    <div class="rating">
+        <input type="radio" name="star" id="star1">
+        <label for="star1"></label>
+        <input type="radio" name="star" id="star2">
+        <label for="star2"></label>
+        <input type="radio" name="star" id="star3">
+        <label for="star3"></label>
+        <input type="radio" name="star" id="star4">
+        <label for="star4"></label>
+        <input type="radio" name="star" id="star5">
+        <label for="star5"></label>
+
+    </div>
+    <div style="border:2px solid black;height:300px;width:600px;margin-left:65px;margin-top:10px;">
+        <form action="action.php">
+            <p><label for="yesorno"><b style="margin-left:10px;">Item as decribed by HRX seller ?</b><span style="margin-left:100px;"></span>Yes<input type="radio" id="yesorno" name="yesorno"> No<input type="radio" id="yesorno" name="yesorno"></p>
+            
+            <label style="font-weight: bold;margin-left:10px" for="com">Comments</label><br>
+            <textarea style="margin-left:10px" type="description" rows="4" cols="75" name="description" id="com"></textarea><br><br>
+            <p><b style="margin-left:10px;">Would You like to buy Similar items ?</b></p>
+            <p><b style="margin-left:10px"><a href="http://127.0.0.1:5500/HTML/PRACT-3/index.html"> Visit Corner Store </a><br>
+            <button>Submit</button>
+            <button>Reset</button>
+            
+        </form>
+    </div>
+</body>
+</html>
