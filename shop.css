@@ -11,7 +11,7 @@ body{
 .i1{
     height:80px;
     width:80px;
-    margin-left:60px;
+    margin:0 30px;
 }
 .box1{
     border:2px solid rgb(239, 239, 239);
